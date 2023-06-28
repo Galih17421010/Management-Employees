@@ -31,7 +31,7 @@ class CityController extends Controller
         ->class('p-4 bg-white rounded-md space-y-4')
         ->fields([
             Input::make('name')->label('Name'),
-            Select::make('state_id')->options(State::pluck('name', 'id')->toArray()),
+            Select::make('state_id')->label('Chose a State')->options(State::pluck('name', 'id')->toArray()),
             Submit::make()->label('Save')
         ]);
 
